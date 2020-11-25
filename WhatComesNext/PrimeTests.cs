@@ -24,7 +24,7 @@ namespace WhatComesNext
         [Fact]
         public void Prime12()
         {
-            var machine = new WhatsNext();
+            var machine = new Machine();
             var primes = machine.Primes(12);
             Assert.Equal(new List<decimal> {2m, 3m, 5m, 7m, 11m, 13m}, primes);
         }
@@ -32,7 +32,7 @@ namespace WhatComesNext
         [Fact]
         public void Prime100()
         {
-            var machine = new WhatsNext();
+            var machine = new Machine();
             var primes = machine.Primes(100);
             Assert.Equal(new List<decimal>
                 {

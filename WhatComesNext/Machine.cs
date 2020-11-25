@@ -18,8 +18,17 @@ using System.Collections.Generic;
 
 namespace WhatComesNext
 {
-    public class WhatsNext
+    public class Machine
     {
+        public static int NextAdjustment(int adjustmentsCount)
+        {
+            var index = (adjustmentsCount - 1) / 2 + 1;
+            var found = adjustmentsCount % 2 == 0
+                ? adjustmentsCount - index * (3 * -index - 1) / 2
+                : (adjustmentsCount + index * (3 * index - 1)) / 2;
+            return found;
+        }
+
         public IEnumerable<decimal> Primes(int max)
         {
             var counts = new decimal[max + 2];
@@ -41,10 +50,7 @@ namespace WhatComesNext
                 if (next == i + 2m)
                     yield return next - 1m;
 
-                var index = (adjustments.Count - 1) / 2 + 1;
-                var found = adjustments.Count % 2 == 0
-                    ? adjustments.Count - index * (3 * -index - 1) / 2
-                    : (adjustments.Count + index * (3 * index - 1)) / 2;
+                var found = NextAdjustment(adjustments.Count);
                 if (i < found - 1) continue;
                 adjustments.Add(i + 1, adjustments.Count % 4 < 2);
             }
@@ -67,10 +73,7 @@ namespace WhatComesNext
 
                 counts[i + 1] = next;
 
-                var index = (adjustments.Count - 1) / 2 + 1;
-                var found = adjustments.Count % 2 == 0
-                    ? adjustments.Count - index * (3 * -index - 1) / 2
-                    : (adjustments.Count + index * (3 * index - 1)) / 2;
+                var found = NextAdjustment(adjustments.Count);
                 if (i < found - 1) continue;
                 adjustments.Add(found, adjustments.Count % 4 < 2);
             }

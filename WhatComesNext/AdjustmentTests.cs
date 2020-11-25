@@ -18,62 +18,62 @@ using Xunit;
 
 namespace WhatComesNext
 {
-    public class PentagonalTests
+    public class AdjustmentTests
     {
         [Fact]
         public void Test0()
         {
-            var machine = new Machine();
-            var count = machine.PartitionNumbers(0);
-            Assert.Equal(1m, count);
+            var next = Machine.NextAdjustment(0);
+            Assert.Equal(2, next);
         }
 
         [Fact]
         public void Test1()
         {
-            var machine = new Machine();
-            var count = machine.PartitionNumbers(1);
-            Assert.Equal(1m, count);
+            var next = Machine.NextAdjustment(1);
+            Assert.Equal(1, next);
         }
 
         [Fact]
         public void Test2()
         {
-            var machine = new Machine();
-            var count = machine.PartitionNumbers(2);
-            Assert.Equal(2m, count);
+            var next = Machine.NextAdjustment(2);
+            Assert.Equal(4, next);
         }
 
         [Fact]
         public void Test3()
         {
-            var machine = new Machine();
-            var count = machine.PartitionNumbers(3);
-            Assert.Equal(3m, count);
+            var next = Machine.NextAdjustment(3);
+            Assert.Equal(6, next);
         }
 
         [Fact]
         public void Test4()
         {
-            var machine = new Machine();
-            var count = machine.PartitionNumbers(4);
-            Assert.Equal(5m, count);
+            var next = Machine.NextAdjustment(4);
+            Assert.Equal(11, next);
         }
 
         [Fact]
-        public void Test13()
+        public void Test5()
         {
-            var machine = new Machine();
-            var count = machine.PartitionNumbers(13);
-            Assert.Equal(101m, count);
+            var next = Machine.NextAdjustment(5);
+            Assert.Equal(14, next);
+        }
+
+        [Fact]
+        public void Test6()
+        {
+            var next = Machine.NextAdjustment(6);
+            Assert.Equal(21, next);
         }
 
         [Fact]
         public void Test666()
         {
-            var machine = new Machine();
-            var count = machine.PartitionNumbers(666);
-            Assert.Equal(11956824258286445517629485m, count);
+            var next = Machine.NextAdjustment(666);
+            Assert.Equal(167166, next);
         }
     }
 }

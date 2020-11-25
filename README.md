@@ -1,4 +1,4 @@
-# The hardest "What comes next?" (Euler's pentagonal formula)
+# Euler's Twisted Machine - Pentagonal Formula
 
 Puzzle from Mathologer's video: [The hardest "What comes next?" (Euler's pentagonal formula)](https://www.youtube.com/watch?v=iJ8pnCO0nTY)
 

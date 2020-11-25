@@ -36,49 +36,49 @@ namespace WhatComesNext
             var adjustments = new Dictionary<int, bool> {{0, true}};
             for (var i = 0; i <= max; i++)
             {
-                var next = 0m;
+                var count = 0m;
                 for (var j = 0; j <= i; j++)
                 {
                     var doAdj = adjustments.TryGetValue(i - j, out var doAdd);
                     if (!doAdj) continue;
-                    next += doAdd ? counts[j] : -counts[j];
+                    count += doAdd ? counts[j] : -counts[j];
                 }
 
-                counts[i + 1] = next;
+                counts[i + 1] = count;
                 counts[0]++;
 
-                if (next == i + 2m)
-                    yield return next - 1m;
+                if (count == i + 2m)
+                    yield return count - 1m;
 
-                var found = NextAdjustment(adjustments.Count);
-                if (i < found - 1) continue;
-                adjustments.Add(i + 1, adjustments.Count % 4 < 2);
+                var next = NextAdjustment(adjustments.Count);
+                if (i < next - 1) continue;
+                adjustments.Add(next, adjustments.Count % 4 < 2);
             }
         }
 
-        public decimal PartitionNumbers(int count)
+        public decimal PartitionNumbers(int index)
         {
-            var counts = new decimal[count + 2];
+            var counts = new decimal[index + 2];
             counts[0] = 1m;
             var adjustments = new Dictionary<int, bool> {{0, true}};
-            for (var i = 0; i <= count; i++)
+            for (var i = 0; i <= index; i++)
             {
-                var next = 0m;
+                var count = 0m;
                 for (var j = 0; j <= i; j++)
                 {
                     var doAdj = adjustments.TryGetValue(i - j, out var doAdd);
                     if (!doAdj) continue;
-                    next += doAdd ? counts[j] : -counts[j];
+                    count += doAdd ? counts[j] : -counts[j];
                 }
 
-                counts[i + 1] = next;
+                counts[i + 1] = count;
 
-                var found = NextAdjustment(adjustments.Count);
-                if (i < found - 1) continue;
-                adjustments.Add(found, adjustments.Count % 4 < 2);
+                var next = NextAdjustment(adjustments.Count);
+                if (i < next - 1) continue;
+                adjustments.Add(next, adjustments.Count % 4 < 2);
             }
 
-            return counts[count];
+            return counts[index];
         }
     }
 }

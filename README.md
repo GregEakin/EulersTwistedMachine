@@ -6,9 +6,9 @@ Puzzle from Mathologer's video: [The hardest "What comes next?" (Euler's pentago
 [Fact]
 public void Test666()
 {
-    var next = new WhatsNext();
-    var buffer = next.PartitionNumbers(666);
-    Assert.Equal(11956824258286445517629485m, buffer);
+    var machine = new WhatsNext();
+    var count = machine.PartitionNumbers(666);
+    Assert.Equal(11956824258286445517629485m, count);
 }
 ```
 

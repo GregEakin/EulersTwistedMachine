@@ -21,13 +21,6 @@ namespace WhatComesNext
     public class AdjustmentTests
     {
         [Fact]
-        public void Test0()
-        {
-            var next = Machine.NextAdjustment(0);
-            Assert.Equal(2, next);
-        }
-
-        [Fact]
         public void Test1()
         {
             var next = Machine.NextAdjustment(1);

@@ -1,4 +1,4 @@
-// Copyright 2019 Greg Eakin
+// Copyright 2020 Greg Eakin
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -11,7 +11,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 // 
-// From the video Mathologer video: The hardest "What comes next?" (Euler's pentagonal formula)
+// From the Mathologer video: The hardest "What comes next?" (Euler's pentagonal formula)
 // https://www.youtube.com/watch?v=iJ8pnCO0nTY
 
 using System.Collections.Generic;

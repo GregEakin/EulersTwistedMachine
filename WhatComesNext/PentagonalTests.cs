@@ -11,7 +11,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 // 
-// From the Mathologer video: The hardest "What comes next?" (Euler's pentagonal formula)
+// From the Mathologer video: The hardest "What comes machine?" (Euler's pentagonal formula)
 // https://www.youtube.com/watch?v=iJ8pnCO0nTY
 
 using Xunit;
@@ -23,57 +23,57 @@ namespace WhatComesNext
         [Fact]
         public void Test0()
         {
-            var next = new WhatsNext();
-            var buffer = next.PartitionNumbers(0);
-            Assert.Equal(1m, buffer);
+            var machine = new WhatsNext();
+            var count = machine.PartitionNumbers(0);
+            Assert.Equal(1m, count);
         }
 
         [Fact]
         public void Test1()
         {
-            var next = new WhatsNext();
-            var buffer = next.PartitionNumbers(1);
-            Assert.Equal(1m, buffer);
+            var machine = new WhatsNext();
+            var count = machine.PartitionNumbers(1);
+            Assert.Equal(1m, count);
         }
 
         [Fact]
         public void Test2()
         {
-            var next = new WhatsNext();
-            var buffer = next.PartitionNumbers(2);
-            Assert.Equal(2m, buffer);
+            var machine = new WhatsNext();
+            var count = machine.PartitionNumbers(2);
+            Assert.Equal(2m, count);
         }
 
         [Fact]
         public void Test3()
         {
-            var next = new WhatsNext();
-            var buffer = next.PartitionNumbers(3);
-            Assert.Equal(3m, buffer);
+            var machine = new WhatsNext();
+            var count = machine.PartitionNumbers(3);
+            Assert.Equal(3m, count);
         }
 
         [Fact]
         public void Test4()
         {
-            var next = new WhatsNext();
-            var buffer = next.PartitionNumbers(4);
-            Assert.Equal(5m, buffer);
+            var machine = new WhatsNext();
+            var count = machine.PartitionNumbers(4);
+            Assert.Equal(5m, count);
         }
 
         [Fact]
         public void Test13()
         {
-            var next = new WhatsNext();
-            var buffer = next.PartitionNumbers(13);
-            Assert.Equal(101m, buffer);
+            var machine = new WhatsNext();
+            var count = machine.PartitionNumbers(13);
+            Assert.Equal(101m, count);
         }
 
         [Fact]
         public void Test666()
         {
-            var next = new WhatsNext();
-            var buffer = next.PartitionNumbers(666);
-            Assert.Equal(11956824258286445517629485m, buffer);
+            var machine = new WhatsNext();
+            var count = machine.PartitionNumbers(666);
+            Assert.Equal(11956824258286445517629485m, count);
         }
     }
 }

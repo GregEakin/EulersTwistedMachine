@@ -11,7 +11,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 // 
-// From the Mathologer video: The hardest "What comes next?" (Euler's pentagonal formula)
+// From the Mathologer video: The hardest "What comes machine?" (Euler's pentagonal formula)
 // https://www.youtube.com/watch?v=iJ8pnCO0nTY
 
 using System.Collections.Generic;
@@ -19,26 +19,25 @@ using Xunit;
 
 namespace WhatComesNext
 {
-    public class FactorTests
+    public class PrimeTests
     {
         [Fact]
-        public void Factor12()
+        public void Prime12()
         {
-            var next = new WhatsNext();
-            var buffer = next.Primes(12);
-            Assert.Equal(new List<decimal> {2m, 3m, 5m, 7m, 11m, 13m}, buffer);
+            var machine = new WhatsNext();
+            var primes = machine.Primes(12);
+            Assert.Equal(new List<decimal> {2m, 3m, 5m, 7m, 11m, 13m}, primes);
         }
 
         [Fact]
-        public void Factor100()
+        public void Prime100()
         {
-            var next = new WhatsNext();
-            var buffer = next.Primes(100);
-            Assert.Equal(
-                new List<decimal>
+            var machine = new WhatsNext();
+            var primes = machine.Primes(100);
+            Assert.Equal(new List<decimal>
                 {
                     2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101
-                }, buffer);
+                }, primes);
         }
     }
 }

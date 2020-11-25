@@ -24,7 +24,7 @@ namespace WhatComesNext
         public void Test0()
         {
             var next = new WhatsNext();
-            var buffer = next.SumOfIntegers(0);
+            var buffer = next.PartitionNumbers(0);
             Assert.Equal(1m, buffer);
         }
 
@@ -32,7 +32,7 @@ namespace WhatComesNext
         public void Test1()
         {
             var next = new WhatsNext();
-            var buffer = next.SumOfIntegers(1);
+            var buffer = next.PartitionNumbers(1);
             Assert.Equal(1m, buffer);
         }
 
@@ -40,7 +40,7 @@ namespace WhatComesNext
         public void Test2()
         {
             var next = new WhatsNext();
-            var buffer = next.SumOfIntegers(2);
+            var buffer = next.PartitionNumbers(2);
             Assert.Equal(2m, buffer);
         }
 
@@ -48,7 +48,7 @@ namespace WhatComesNext
         public void Test3()
         {
             var next = new WhatsNext();
-            var buffer = next.SumOfIntegers(3);
+            var buffer = next.PartitionNumbers(3);
             Assert.Equal(3m, buffer);
         }
 
@@ -56,7 +56,7 @@ namespace WhatComesNext
         public void Test4()
         {
             var next = new WhatsNext();
-            var buffer = next.SumOfIntegers(4);
+            var buffer = next.PartitionNumbers(4);
             Assert.Equal(5m, buffer);
         }
 
@@ -64,7 +64,7 @@ namespace WhatComesNext
         public void Test13()
         {
             var next = new WhatsNext();
-            var buffer = next.SumOfIntegers(13);
+            var buffer = next.PartitionNumbers(13);
             Assert.Equal(101m, buffer);
         }
 
@@ -72,7 +72,7 @@ namespace WhatComesNext
         public void Test666()
         {
             var next = new WhatsNext();
-            var buffer = next.SumOfIntegers(666);
+            var buffer = next.PartitionNumbers(666);
             Assert.Equal(11956824258286445517629485m, buffer);
         }
     }

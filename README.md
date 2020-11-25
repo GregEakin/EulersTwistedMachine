@@ -7,7 +7,7 @@ Puzzle from Mathologer's video: [The hardest "What comes next?" (Euler's pentago
 public void Test666()
 {
     var next = new WhatsNext();
-    var buffer = next.SumOfIntegers(666);
+    var buffer = next.PartitionNumbers(666);
     Assert.Equal(11956824258286445517629485m, buffer);
 }
 ```

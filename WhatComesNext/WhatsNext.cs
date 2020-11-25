@@ -20,12 +20,12 @@ namespace WhatComesNext
 {
     public class WhatsNext
     {
-        public IEnumerable<decimal> Primes(int size)
+        public IEnumerable<decimal> Primes(int max)
         {
-            var counts = new decimal[size + 2];
+            var counts = new decimal[max + 2];
             counts[0] = 1m;
             var adjustments = new Dictionary<int, bool> {{0, true}};
-            for (var i = 0; i <= size; i++)
+            for (var i = 0; i <= max; i++)
             {
                 var next = 0m;
                 for (var j = 0; j <= i; j++)
@@ -50,12 +50,12 @@ namespace WhatComesNext
             }
         }
 
-        public decimal SumOfIntegers(int size)
+        public decimal PartitionNumbers(int count)
         {
-            var counts = new decimal[size + 2];
+            var counts = new decimal[count + 2];
             counts[0] = 1m;
             var adjustments = new Dictionary<int, bool> {{0, true}};
-            for (var i = 0; i <= size; i++)
+            for (var i = 0; i <= count; i++)
             {
                 var next = 0m;
                 for (var j = 0; j <= i; j++)
@@ -75,7 +75,7 @@ namespace WhatComesNext
                 adjustments.Add(found, adjustments.Count % 4 < 2);
             }
 
-            return counts[size];
+            return counts[count];
         }
     }
 }

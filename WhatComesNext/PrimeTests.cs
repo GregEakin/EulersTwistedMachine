@@ -15,6 +15,8 @@
 // https://www.youtube.com/watch?v=iJ8pnCO0nTY
 
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using Xunit;
 
 namespace WhatComesNext
@@ -39,5 +41,18 @@ namespace WhatComesNext
                     2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101
                 }, primes);
         }
+
+        // [Fact]
+        // public void Prime100000()
+        // {
+        //     var machine = new Machine();
+        //     var watch = new Stopwatch();
+        //     watch.Start();
+        //     var primes = machine.Primes(100000);
+        //     Assert.Equal(9592, primes.Count());
+        //     watch.Stop();
+        //     // Assert.Equal(0, watch.ElapsedMilliseconds);
+        //     // took 94.984 seconds on my laptop
+        // }
     }
 }
